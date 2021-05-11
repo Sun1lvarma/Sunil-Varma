@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Sunil Varma</title>
+  </head>
+  <body>
+    <div class="website">
+      <div class="cursor"></div>
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <img class="home-illustration" src="./images/illustration.svg" alt="" />
+        <img class="ellipse" src="./images/Ellipse 2 (1).png" alt="" />
+        <h1>SUNIL VARMA</h1>
+        <p>13/03/2002</p>
+        <p class="sdate">19/11/2016</p>
+      </main>
+    </div>
+  </body>
+
+  <script>
+    let mouseCursor = document.querySelector(".cursor");
+    let navlinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("mousemove", (e) => {
+      mouseCursor.style.top = e.pageY + "px";
+      mouseCursor.style.left = e.pageX + "px";
+    });
+
+    navlinks.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        mouseCursor.classList.add("link-grow");
+        link.classList.add("hover");
+      });
+
+      link.addEventListener("mouseleave", () => {
+        mouseCursor.classList.remove("link-grow");
+        link.classList.remove("hover");
+      });
+    });
+  </script>
+</html>
